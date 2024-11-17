@@ -4,11 +4,11 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <div class="wrapper">
       <HelloWorld />
     </div>
-  </header>
+  </header> -->
 
   <RouterView />
 </template>
