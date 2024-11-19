@@ -6,6 +6,7 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   plugins: [
@@ -27,6 +28,7 @@ export default defineConfig({
     Components({
       directoryAsNamespace: true, // 深层级组件在使用时需要将子文件名作为前缀
       collapseSamePrefixes: true, // 当深层组件的前缀和子文件的名称相同时,省略前缀
+      resolvers: [ElementPlusResolver()],
     }),
   ],
 })
