@@ -7,12 +7,20 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Layouts from 'vite-plugin-vue-layouts'
+import VueMacros from 'unplugin-vue-macros/vite'
 
 export default defineConfig({
   plugins: [
     VueRouter({}),
-    vue(),
-    vueJsx(),
+    VueMacros({
+      plugins: {
+        vue: vue(),
+        vueJsx: vueJsx(), // 如有需要
+      },
+    }),
+    // vue(),
+    // vueJsx(),
     UnoCSS(),
     AutoImport({
       include: [
@@ -29,6 +37,10 @@ export default defineConfig({
       directoryAsNamespace: true, // 深层级组件在使用时需要将子文件名作为前缀
       collapseSamePrefixes: true, // 当深层组件的前缀和子文件的名称相同时,省略前缀
       resolvers: [ElementPlusResolver()],
+    }),
+    Layouts({
+      layoutsDirs: 'src/layouts',
+      defaultLayout: 'default',
     }),
   ],
 })

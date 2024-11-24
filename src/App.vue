@@ -7,3 +7,7 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style scoped lang="scss"></style>
+<route lang="yaml">
+meta:
+  layout: default
+</route>

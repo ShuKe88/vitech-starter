@@ -8,7 +8,7 @@ export default defineConfig({
     presetIcons({
       /* options */
       prefix: 'i-',
-      extraProperties: { display: 'inline-block' },
+      extraProperties: { display: 'inline-block' }, // 图标采用行内方式展示
     }),
   ],
 })

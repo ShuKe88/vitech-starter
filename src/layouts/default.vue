@@ -1,11 +1,10 @@
 <template>
-  <div>hello about</div>
+  <div>
+    this is default.vue
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped></style>
-<route lang="yaml">
-meta:
-  layout: about
-</route>
