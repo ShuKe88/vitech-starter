@@ -4,3 +4,4 @@
 /// <reference types="unocss/vite" />
 /// <reference types="vite-plugin-vue-layouts/client" />
 /// <reference types="unplugin-vue-macros/macros-global" />
+/// <reference types="vite-plugin-pwa/client" />
