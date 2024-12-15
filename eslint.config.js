@@ -34,5 +34,13 @@ export default [
     name: 'vue/multi-word-component-names',
     ignores: [],
   },
+  {
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: [],
+      },
+    ],
+  },
   skipFormatting,
 ]
