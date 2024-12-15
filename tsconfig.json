@@ -13,6 +13,10 @@
   ],
   "compilerOptions": {
     "module": "Preserve",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["unplugin-vue-macros/macros-global"]
+  },
+  "vueCompilerOptions": {
+    "plugins": ["unplugin-vue-macros/volar"]
   }
 }

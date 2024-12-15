@@ -1,7 +1,25 @@
 <template>
-  <div class="text-3xl font-bold underline">hello router</div>
+  <div>home</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { registerSW } from 'virtual:pwa-register'
+
+onMounted(() => {
+  registerSW({
+    immediate: true,
+    onRegisteredSW(swScriptUrl, registration) {
+      setInterval(() => {
+        registration?.update()
+      }, 3600000)
+    },
+  })
+})
+</script>
 
 <style scoped></style>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
